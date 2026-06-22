@@ -11,7 +11,7 @@ const ROLES = [
   "Full-Stack Developer",
   "Front-End Developer",
   "Back-End Developer",
-  "UI/UX Enthusiast",
+  "Mobile",
 ];
 
 const STATS = [
