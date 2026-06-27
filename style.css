@@ -737,6 +737,11 @@ body {
     cursor: default;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
 .skill-card::before {
@@ -762,15 +767,20 @@ body {
 }
 
 .skill-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-    display: block;
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    image-rendering: auto;
 }
 
 .skill-name {
     font-size: 0.8125rem;
     font-weight: 600;
     color: var(--text-primary);
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 600;
 }
 
 /* ---- Projects Section ---- */
@@ -1349,4 +1359,16 @@ body {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.double-icons{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    align-items:center;
+}
+
+.double-icons img{
+    width:40px;
+    height:40px;
 }

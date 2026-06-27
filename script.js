@@ -21,20 +21,21 @@ const STATS = [
 ];
 
 const SKILLS = [
-  { name: "HTML5", icon: "🌐" },
-  { name: "CSS3", icon: "🎨" },
-  { name: "JavaScript", icon: "⚡" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "React", icon: "⚛️" },
-  { name: "Next.js", icon: "▲" },
-  { name: "Node.js", icon: "🟢" },
-  { name: "NestJS", icon: "🚀" },
-  { name: "PHP", icon: "🐘" },
-  { name: "C#", icon: "🔷" },
-  { name: "MySQL", icon: "🗄️" },
-  { name: "PostegreSQL", icon: "🗄️" },
-  { name: "SQL", icon: "🗄️" },
-  { name: "Git/GitHub", icon: "🌿" },
+  { name: "HTML5", img: "/assets/html.png" },
+  { name: "CSS3", img: "/assets/css3.png" },
+  { name: "JavaScript", img: "/assets/js.png" },
+  { name: "TypeScript", img: "/assets/ts.png" },
+  { name: "React", img: "/assets/react.png" },
+  { name: "Next.js", img: "/assets/next2.png" },
+  { name: "Node.js", img: "/assets/node.png" },
+  { name: "NestJS", img: "/assets/nest.png" },
+  { name: "PHP", img: "/assets/php.png" },
+  { name: "C#", img: "/assets/csharp.png" },
+  { name: "MySQL", img: "/assets/mysql.png" },
+  { name: "PostgreSQL", img: "/assets/psql.png" },
+  { name: "SQL", img: "/assets/sql.png" },
+  { name: "Git", img: "/assets/git.png" },
+  { name: "GitHub", img: "/assets/github.png" },
 ];
 
 const PROJECTS = [
@@ -316,9 +317,9 @@ function renderSkills() {
     card.style.transitionDelay = `${index * 0.05}s`;
 
     card.innerHTML = `
-            <span class="skill-icon">${skill.icon}</span>
-            <span class="skill-name">${skill.name}</span>
-        `;
+      <img class="skill-icon" src="${skill.img}" alt="${skill.name}">
+      <span class="skill-name">${skill.name}</span>
+    `;
 
     container.appendChild(card);
   });
