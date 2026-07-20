@@ -111,6 +111,17 @@ const PROJECTS = [
       "https://www.linkedin.com/feed/update/urn:li:activity:7454922471033610240/",
     repoLink: "https://github.com/DevNelson16/Programa-o-De-Horas-De-Trabalho",
   },
+  {
+    id: 7,
+    title: "Cripto Moedas + API",
+    description:
+      "Aplicação web desenvolvida com React e TypeScript para acompanhar criptomoedas em tempo real através da API CoinCap. Permite viualizar a listagem das principais moeda, consultar detalhes como preço, capitalização de mercado, volume de negociação e variação nas últimas 24 horas, com interface moderna e responsiva.",
+    tags: ["React", "TypeScript", "Vite", "CSS Modules", "CoinCap API"],
+    icon: "🪙",
+    demoLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7484195876966670336/",
+    repoLink: "https://github.com/DevNelson16/Criptomoedas-API",
+  },
 ];
 
 const CODE_LINES = [
