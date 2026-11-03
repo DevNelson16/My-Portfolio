@@ -14,7 +14,7 @@ export default function About() {
         <div className={styles.content}>
           <div className={styles.imageWrapper}>
             <img
-              src="/public/assets/mihaIMG.jpeg"
+              src="/assets/mihaIMG.jpeg"
               alt="Nelson Geovetty Jaime"
               className={styles.image}
             />
