@@ -1,10 +1,8 @@
-import { useTypewriter } from "../../hooks/useTypewriter";
-import { ROLES } from "../../data/content";
-import styles from "./Hero.module.css";
+import { useTypewriter } from "../../hooks/useTypewriter"
+import { ROLES } from "../../data/content"
+import styles from "./Hero.module.css"
 
 export default function Hero() {
-  // Todo o comportamento de "escrever/apagar" está isolado no hook — o
-  // componente só precisa de mostrar o texto que ele devolve.
   const role = useTypewriter(ROLES);
 
   return (
@@ -29,7 +27,7 @@ export default function Hero() {
             Falar Comigo
           </a>
           <a
-            href="/assets/mycvatualizadomestre.pdf"
+            href="/assets/NelsonGeovettyJAIME.pdf"
             className={styles.btnSecondary}
             download
           >
@@ -38,5 +36,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

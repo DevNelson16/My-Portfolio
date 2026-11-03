@@ -1,5 +1,5 @@
-import { STATS } from "../../data/content";
-import styles from "./About.module.css";
+import { STATS } from "../../data/content"
+import styles from "./About.module.css"
 
 export default function About() {
   return (
@@ -35,9 +35,7 @@ export default function About() {
               façam crescer como profissional.
             </p>
 
-            {/* .map transforma o array STATS em elementos JSX.
-                A "key" é obrigatória em listas no React: ajuda-o a saber
-                qual item mudou/foi removido sem ter de recriar todos. */}
+            
             <div className={styles.stats}>
               {STATS.map((stat) => (
                 <div key={stat.label} className={styles.statCard}>
@@ -50,5 +48,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -17,11 +17,10 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: border-color 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
   border-color: var(--accent);
 }
 
@@ -43,6 +42,8 @@
   flex-grow: 1;
 }
 
+/* Tecnologias */
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -58,11 +59,45 @@
   border-radius: 999px;
 }
 
+.skills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.skillIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(128, 128, 128, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.techIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.skillIcon:hover {
+  transform: translateY(-4px);
+  background: rgba(128, 128, 128, 0.15);
+}
+
+/* Links */
+
 .links {
   display: flex;
   gap: 1rem;
   font-size: 0.85rem;
   font-weight: 600;
+  margin-top: 1rem;
 }
 
 .links a {
@@ -71,4 +106,283 @@
 
 .links a:hover {
   color: var(--accent-light);
+}
+
+/* Swiper Slider */
+
+.imageSlider {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--bg-hover);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* Setas de navegação */
+
+.imageSlider :global(.swiper-button-next),
+.imageSlider :global(.swiper-button-prev) {
+  color: white;
+  background: rgba(0, 0, 0, 0.55);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.imageSlider :global(.swiper-button-next)::after,
+.imageSlider :global(.swiper-button-prev)::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.imageSlider :global(.swiper-button-next):hover,
+.imageSlider :global(.swiper-button-prev):hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Indicadores */
+
+.imageSlider :global(.swiper-pagination-bullet) {
+  background: white;
+  opacity: 0.6;
+}
+
+.imageSlider :global(.swiper-pagination-bullet-active) {
+  background: var(--accent);
+  opacity: 1;
+}
+
+/* Lightbox */
+
+/* Lightbox */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: fadeIn 0.25s ease;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.zoomImage {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  animation: zoomIn 0.3s ease;
+}
+
+.imageCounter {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Fechar */
+
+.closeLightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+/* Navegação */
+
+.lightboxPrev,
+.lightboxNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 100000;
+}
+
+.lightboxPrev:hover,
+.lightboxNext:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.lightboxPrev {
+  left: 25px;
+}
+
+.lightboxNext {
+  right: 25px;
+}
+
+/* Animações */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+  .lightbox {
+    padding: 15px;
+  }
+
+  .zoomImage {
+    max-height: 75vh;
+  }
+
+  .lightboxPrev,
+  .lightboxNext {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .lightboxPrev {
+    left: 8px;
+  }
+
+  .lightboxNext {
+    right: 8px;
+  }
+
+  .closeLightbox {
+    top: 10px;
+    right: 15px;
+    font-size: 36px;
+  }
+}
+
+.zoomImage {
+  max-width: 95%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: default;
+  animation: zoomIn 0.3s ease;
+}
+
+.closeLightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+  z-index: 100000;
+  transition: transform 0.2s ease;
+}
+
+.closeLightbox:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+  .imageSlider {
+    height: 190px;
+  }
+
+  .skillIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .techIcon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .lightbox {
+    padding: 15px;
+  }
+
+  .zoomImage {
+    max-width: 100%;
+    max-height: 85%;
+  }
+
+  .closeLightbox {
+    top: 10px;
+    right: 15px;
+    font-size: 36px;
+  }
 }

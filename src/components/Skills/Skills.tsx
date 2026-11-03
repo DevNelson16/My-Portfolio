@@ -1,5 +1,5 @@
-import { SKILLS } from "../../data/content";
-import styles from "./Skills.module.css";
+import { SKILLS } from "../../data/content"
+import styles from "./Skills.module.css"
 
 export default function Skills() {
   return (
@@ -26,5 +26,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  );
+  )
 }

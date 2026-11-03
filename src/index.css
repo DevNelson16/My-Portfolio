@@ -1,8 +1,3 @@
-/* ==========================================================
-   Variáveis globais de tema (dark = padrão, light = alternativo)
-   Mantidas iguais às do teu site atual para preservar a identidade visual.
-   Qualquer componente pode usar var(--accent), var(--bg-primary), etc.
-   ========================================================== */
 :root {
   --bg-primary: #0a0e1a;
   --bg-secondary: #111827;

@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { useTheme } from "../../context/ThemeContext";
-import { useActiveSection } from "../../hooks/useActiveSection";
-import styles from "./Navbar.module.css";
+import { useState } from "react"
+import { useTheme } from "../../context/ThemeContext"
+import { useActiveSection } from "../../hooks/useActiveSection"
+import styles from "./Navbar.module.css"
 
 const LINKS = [
   { id: "hero", label: "Início" },
@@ -12,10 +12,10 @@ const LINKS = [
 ];
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
-  const activeId = useActiveSection(LINKS.map((l) => l.id));
+  const { theme, toggleTheme } = useTheme()
+  const activeId = useActiveSection(LINKS.map((l) => l.id))
   // Estado local só deste componente: controla se o menu mobile está aberto.
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
     <nav className={styles.navbar}>
@@ -59,5 +59,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

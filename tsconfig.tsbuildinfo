@@ -1,0 +1,22 @@
+{
+  "root": [
+    "./src/app.tsx",
+    "./src/main.tsx",
+    "./src/vite-env.d.ts",
+    "./src/components/about/about.tsx",
+    "./src/components/contact/contact.tsx",
+    "./src/components/footer/footer.tsx",
+    "./src/components/hero/hero.tsx",
+    "./src/components/navbar/navbar.tsx",
+    "./src/components/projects/projectcard.tsx",
+    "./src/components/projects/projects.tsx",
+    "./src/components/skills/skills.tsx",
+    "./src/components/skills/index.tsx",
+    "./src/context/themecontext.tsx",
+    "./src/data/content.ts",
+    "./src/hooks/useactivesection.ts",
+    "./src/hooks/usetypewriter.ts",
+    "./src/types/index.ts"
+  ],
+  "version": "5.9.3"
+}

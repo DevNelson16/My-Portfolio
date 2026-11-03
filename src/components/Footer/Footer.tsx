@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer style={{ textAlign: "center", padding: "2rem", color: "var(--text-muted)" }}>
       <p>
-        © {year} Nelson Geovetty — Full Stack Developer
+        © {year} Nelson Geovetty Jaime — Full Stack Developer
       </p>
     </footer>
   );
